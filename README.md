@@ -118,7 +118,7 @@ Cuando juntamos todo el código, nos queda de esta forma:
 #include <Arduino.h>
 #include <HardwareSerial.h>
 
-uint8_t dato=1;
+uint8_t dato=100;
 
 void setup() {
   // put your setup code here, to run once:
@@ -133,6 +133,7 @@ void loop() {
     dato = Serial2.read();
     Serial.println(dato);
     Serial2.write(dato); 
+    dato = dato - 1;
   delay(1000);
   }
 }
@@ -142,17 +143,11 @@ void loop() {
 ### Diagrama de flujo
 ```mermaid
 flowchart TD;
-  A[Inicializamos el valor de datos para leer]-->B;
-  B[Transmitimos el dato por el Serial2]-->C;
-  C[Leemos el dato transmitido por el Serial2 y lo igualamos a una variable dato]-->D;
-  D[Este dato se vuelve a transmitir tanto por la terminal como el serial2]-->C;
-
-
   a[Declaramos el valor inicial de los datos para leer]-->b;
   b[Inicializamos los dos puertos seriales a 115200]-->c[Escrivimos por el Serial2 los datos]-->d[Hay valores para leer?];
   d--si-->e[Almacena en la variable el valor que lee desde el Serial2];
   e-->f[Sacamos por el terminal ese valor];
-  f-->g[Transmitimos el nuevo valor al Serial2];
+  f-->g[Transmitimos el valor actualizado al Serial2];
   g-->h[Retardo de 1 segundo]-->d;
   d--no-->d;
 ```
