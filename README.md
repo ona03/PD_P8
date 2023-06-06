@@ -1,6 +1,7 @@
 # Procesadores Digitales - Práctica 8
 
 ## Objetivo
+<div align="justify">
 El objetivo de esta práctica consiste en saber utilizar y comprender el funcionamiento de la comunicación usart, es decir, la capacidad de efectuar una comunicación asíncrona full duplex emisor y receptor simultanea, gracias a los modulos internos del procesador esp32.
 
 ## Software de arduino (funciones básicas)
