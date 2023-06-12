@@ -140,18 +140,18 @@ void loop() {
 }
 ```
 Con una salida:
-```
+```cpp
 100
-    99
-    98
-    97
-    ...
-    1
-    0
-    -1
-    -2
-    ...
-`
+99
+98
+97
+...
+1
+0
+-1
+-2
+...
+```
 ### Diagrama de flujo
 ```mermaid
 flowchart TD;
