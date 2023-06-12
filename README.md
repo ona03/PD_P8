@@ -138,9 +138,20 @@ void loop() {
   delay(1000);
   }
 }
-
 ```
-
+Con una salida:
+```
+100
+    99
+    98
+    97
+    ...
+    1
+    0
+    -1
+    -2
+    ...
+`
 ### Diagrama de flujo
 ```mermaid
 flowchart TD;
